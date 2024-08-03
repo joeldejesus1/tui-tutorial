@@ -1,2 +1,2 @@
-# tui-tutorial
+# -tutorial
 Terminal user interface tutorial
