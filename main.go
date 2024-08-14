@@ -1,17 +1,18 @@
 package main
 
 import (
-	"fmt"
 	"os"
+
+	"github.com/sascha33/tui-tutorial/timezonecalc"
 )
 
+// This is the entry point from the OS into this program
 // user input:
 // 1. stdin -> a read only file handle
 // 2. os.Args -> []string (a list of variables of string type)
+// 3. environmental arguments (learn later)
 func main() {
 
-	//x:=fmt.Sprintf()
-	// print to stdout
-	// \n is called a newline; it is the same as "enter"
-	fmt.Printf("program=%s first arg=%s\n", os.Args[0], os.Args[1])
+	// import the timezonecalc function into main
+	timezonecalc.PrintCLIArgs(os.Args)
 }
