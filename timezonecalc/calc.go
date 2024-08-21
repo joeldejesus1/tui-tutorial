@@ -6,7 +6,12 @@ import "fmt"
 
 // write a function to print the user arguments
 func PrintCLIArgs(args []string) {
-	fmt.Printf("program=%s first arg=%s\n", args[0], args[1])
+	gmtdiff, err := ReadTimeZone(args[0])
+	if err != nil {
+		fmt.Printf("error: %s\n", err)
+	} else {
+		fmt.Printf("GMT Diff is %d\n", gmtdiff)
+	}
 }
 
 // github issue #1
@@ -26,7 +31,6 @@ func ReadTimeZone(timezone string) (gmtdiff int, err error) {
 		err = fmt.Errorf("%s is not a timezone") // put this here?
 	} else {
 		// this part means what?
-
 	}
 	// this line returns gmtdiff and err at the same time
 	return

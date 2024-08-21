@@ -12,7 +12,7 @@ import (
 // 2. os.Args -> []string (a list of variables of string type)
 // 3. environmental arguments (learn later)
 func main() {
-
 	// import the timezonecalc function into main
-	timezonecalc.PrintCLIArgs(os.Args)
+	// ignore the first argument
+	timezonecalc.PrintCLIArgs(os.Args[1:])
 }
